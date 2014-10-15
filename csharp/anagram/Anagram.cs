@@ -28,11 +28,13 @@ public class Anagram
 
     private bool DetectAnagram(string candidate)
     {
-        if (candidate.ToLower().Equals(original))
-            return false;
-        if (SortString(candidate).Equals(word))
-            return true;
-        return false;
+        bool isAnagram = false;
+        if (!candidate.ToLower().Equals(original))
+        {
+            if (SortString(candidate).Equals(word))
+                isAnagram = true;
+        }
+        return isAnagram;
     }
 
     private string SortString(string str)
