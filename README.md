@@ -11,6 +11,8 @@ C#:
   2. Bob
   3. ETL
   4. Anagram
+  5. Hamming
+  6. Word Count
 
 Python:
   1. Bob
