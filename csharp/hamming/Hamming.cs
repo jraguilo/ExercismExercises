@@ -5,9 +5,12 @@ public class Hamming
 {
     public static int Compute(string strand1, string strand2)
     {
-        if (string.IsNullOrEmpty(strand1) || string.IsNullOrEmpty(strand2))
+        if (strand1 == null) throw new ArgumentNullException("Strand 1");
+        if (strand2 == null) throw new ArgumentNullException("Strand 2");
+
+        if(strand1.Trim().Length != strand2.Trim().Length)
         {
-            return 0;
+            throw new ArgumentException("Arguments not of equal length. Can not compute Hamming distance");
         }
 
         int count = 0;
