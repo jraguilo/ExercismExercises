@@ -13,6 +13,8 @@ C#:
   4. Anagram
   5. Hamming
   6. Word Count
+  7. Grade School
+  8. Nucleotide Count
 
 Python:
   1. Bob
