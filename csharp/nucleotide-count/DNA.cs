@@ -13,6 +13,8 @@ public class DNA
         {
             foreach(char nucleotide in strand)
             {
+                if(!NucleotideCounts.ContainsKey(nucleotide))
+                    throw new InvalidNucleotideException();
                 NucleotideCounts[nucleotide]++;
             }
         }
@@ -21,7 +23,7 @@ public class DNA
 
     public int Count(char nucleotide)
     {
-        if (nucleotide != 'A' && nucleotide != 'T' && nucleotide != 'C' && nucleotide != 'G')
+        if (!NucleotideCounts.ContainsKey(nucleotide))
             throw new InvalidNucleotideException();
         return NucleotideCounts[nucleotide];
     }
