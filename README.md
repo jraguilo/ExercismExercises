@@ -15,6 +15,7 @@ C#:
   6. Word Count
   7. Grade School
   8. Nucleotide Count
+  9. Phone Number
 
 Python:
   1. Bob
